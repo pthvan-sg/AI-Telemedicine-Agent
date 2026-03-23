@@ -1,6 +1,13 @@
 # MedScribe AI — Flask API
 
-Doctor-patient transcript analyzer, deployed as a Flask API on Kubernetes.
+## Overview
+MedScribe AI is a production-deployed NLP agent that analyzes 
+doctor-patient transcripts and generates structured clinical summaries. 
+Built with Flask, containerized via Docker, and orchestrated on Kubernetes. 
+Integrates the OpenAI API for medical text understanding.
+
+**Stack:** Python · Flask · Docker · Kubernetes · OpenAI API  
+**Status:** Deployed and live
 
 ---
 
