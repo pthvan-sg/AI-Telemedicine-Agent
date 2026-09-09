@@ -1,7 +1,7 @@
 # MedScribe AI — Flask API
 
 ## Overview
-MedScribe AI is a production-deployed NLP agent that analyzes 
+MedScribe AI is a NLP agent that analyzes 
 doctor-patient transcripts and generates structured clinical summaries. 
 Built with Flask, containerized via Docker, and orchestrated on Kubernetes. 
 Integrates the OpenAI API for medical text understanding.
