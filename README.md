@@ -7,7 +7,6 @@ Built with Flask, containerized via Docker, and orchestrated on Kubernetes.
 Integrates the OpenAI API for medical text understanding.
 
 **Stack:** Python · Flask · Docker · Kubernetes · OpenAI API  
-**Status:** Deployed and live
 
 ---
 
