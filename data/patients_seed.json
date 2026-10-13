@@ -1,0 +1,32 @@
+{
+  "_comment": "Synthetic patients for demos and tests. No real patient data. Never put real PHI in this repo.",
+  "patients": [
+    {
+      "patient_id": "P-1001",
+      "allergies": ["penicillin"],
+      "conditions": ["hypertension"],
+      "medications": ["lisinopril 10 mg daily"],
+      "visits": [
+        {"date": "2026-06-02", "assessment": "Hypertension, well controlled", "summary": "Routine blood pressure review. Continue lisinopril."}
+      ]
+    },
+    {
+      "patient_id": "P-1002",
+      "allergies": [],
+      "conditions": ["atrial fibrillation", "depression"],
+      "medications": ["warfarin 5 mg daily", "sertraline 50 mg daily"],
+      "visits": [
+        {"date": "2026-08-14", "assessment": "Atrial fibrillation, stable on warfarin", "summary": "INR in range. Mood stable on sertraline."}
+      ]
+    },
+    {
+      "patient_id": "P-1003",
+      "allergies": ["sulfa drugs"],
+      "conditions": ["type 2 diabetes"],
+      "medications": ["metformin 1000 mg twice daily"],
+      "visits": [
+        {"date": "2026-07-21", "assessment": "Type 2 diabetes, HbA1c 7.2 percent", "summary": "Diet and exercise counselling, continue metformin."}
+      ]
+    }
+  ]
+}

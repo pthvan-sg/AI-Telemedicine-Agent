@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: medscribe
+spec:
+  replicas: 1
+  selector:
+    matchLabels: {app: medscribe}
+  template:
+    metadata:
+      labels: {app: medscribe}
+    spec:
+      containers:
+        - name: medscribe
+          image: YOUR_DOCKERHUB_USERNAME/medscribe-agent:latest
+          ports: [{containerPort: 5000}]
+          env:
+            - name: OPENAI_API_KEY
+              valueFrom: {secretKeyRef: {name: medscribe-secret, key: OPENAI_API_KEY}}
+          livenessProbe:
+            httpGet: {path: /health, port: 5000}
+          readinessProbe:
+            httpGet: {path: /ready, port: 5000}
+          volumeMounts:
+            - {name: data, mountPath: /data}
+      volumes:
+        - name: data
+          emptyDir: {}   # swap for a PersistentVolumeClaim to keep patient memory across restarts
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: medscribe
+spec:
+  selector: {app: medscribe}
+  ports: [{port: 80, targetPort: 5000}]

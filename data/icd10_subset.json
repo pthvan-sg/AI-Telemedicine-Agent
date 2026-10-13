@@ -1,0 +1,24 @@
+{
+  "_comment": "Tiny demo subset of ICD-10-CM codes. Suggestions only, always confirm against the official code set.",
+  "codes": [
+    {"code": "G43.909", "description": "Migraine, unspecified, not intractable, without status migrainosus", "keywords": "migraine headache photophobia"},
+    {"code": "G43.009", "description": "Migraine without aura, not intractable, without status migrainosus", "keywords": "migraine headache nausea light sensitivity"},
+    {"code": "R51.9", "description": "Headache, unspecified", "keywords": "headache head pain"},
+    {"code": "J06.9", "description": "Acute upper respiratory infection, unspecified", "keywords": "cold URI runny nose sore throat cough"},
+    {"code": "J02.9", "description": "Acute pharyngitis, unspecified", "keywords": "sore throat pharyngitis"},
+    {"code": "J01.90", "description": "Acute sinusitis, unspecified", "keywords": "sinusitis sinus facial pressure congestion"},
+    {"code": "J20.9", "description": "Acute bronchitis, unspecified", "keywords": "bronchitis cough chest"},
+    {"code": "J45.909", "description": "Unspecified asthma, uncomplicated", "keywords": "asthma wheeze inhaler"},
+    {"code": "N39.0", "description": "Urinary tract infection, site not specified", "keywords": "UTI urinary burning dysuria cystitis"},
+    {"code": "I10", "description": "Essential (primary) hypertension", "keywords": "hypertension high blood pressure"},
+    {"code": "E11.9", "description": "Type 2 diabetes mellitus without complications", "keywords": "diabetes type 2 glucose HbA1c metformin"},
+    {"code": "E78.5", "description": "Hyperlipidemia, unspecified", "keywords": "cholesterol hyperlipidemia statin"},
+    {"code": "R07.9", "description": "Chest pain, unspecified", "keywords": "chest pain pressure tightness"},
+    {"code": "K21.9", "description": "Gastro-esophageal reflux disease without esophagitis", "keywords": "reflux GERD heartburn acid"},
+    {"code": "M54.50", "description": "Low back pain, unspecified", "keywords": "back pain lumbar"},
+    {"code": "R50.9", "description": "Fever, unspecified", "keywords": "fever temperature"},
+    {"code": "R11.2", "description": "Nausea with vomiting, unspecified", "keywords": "nausea vomiting"},
+    {"code": "F41.9", "description": "Anxiety disorder, unspecified", "keywords": "anxiety worry panic"},
+    {"code": "I48.91", "description": "Unspecified atrial fibrillation", "keywords": "atrial fibrillation AF palpitations"}
+  ]
+}
