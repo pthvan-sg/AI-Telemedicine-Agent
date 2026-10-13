@@ -6,7 +6,7 @@ ENV PYTHONUNBUFFERED=1 MEDSCRIBE_DB=/data/medscribe.db
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY app.py medical_summarizer.py ./
+COPY app.py ./
 COPY medscribe ./medscribe
 COPY data ./data
 RUN mkdir -p /data

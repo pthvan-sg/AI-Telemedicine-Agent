@@ -30,9 +30,6 @@ medscribe/context.py    chunking, running summary, transcript search
 medscribe/mcp_server.py, mcp_backend.py
 medscribe/baseline.py   original single-call version
 data/                   demo drug KB, ICD-10 subset, guidelines, synthetic patients
-eval/                   benchmark: baseline vs agent without verifier vs full agent
-tests/                  offline tests (scripted LLM, no API key needed)
-medical_summarizer.py   original CLI, kept for reference
 ```
 
 ## Run
@@ -42,7 +39,7 @@ cp .env.example .env        # add your key
 pip install -r requirements.txt
 python -m medscribe                               # sample transcript
 python -m medscribe visit.txt --patient P-1001 --trace
-python -m medscribe --baseline                    # old behaviour
+python -m medscribe --baseline                    # baseline behaviour
 docker build -t medscribe-agent . && docker run --env-file .env -p 5000:5000 medscribe-agent
 curl -X POST localhost:5000/analyze/sample
 ```
@@ -50,16 +47,6 @@ curl -X POST localhost:5000/analyze/sample
 API: `POST /analyze` with `{"transcript": "...", "patient_id": "P-1001", "save": false, "include_trace": false}`. Also `/analyze/baseline`, `/analyze/sample`, `GET /patients/<id>`, `/health`, `/ready`. Set `MEDSCRIBE_API_KEY` to require an `X-API-Key` header.
 
 Kubernetes: create the secret as before, edit the image name in `deployment.yaml`, then `kubectl apply -f deployment.yaml`.
-
-## Tests and evaluation
-
-```
-pip install -r requirements-dev.txt
-pytest                      # no API key needed
-python -m eval.run_eval --repeats 3
-```
-
-`eval.run_eval` runs 9 synthetic cases and writes `eval/results/latest.md`. Metrics: extraction F1, hallucination trap violations (invented dose, invented allergy, denied symptom, withheld diagnosis), safety alert recall, tool-call success rate. Put the numbers you get here. I have not run it against the live API, so no results are claimed in this repo yet.
 
 ## Limits
 
